@@ -406,6 +406,14 @@ body.woocommerce {
 		.product_title {
 			font-size: 24px;
 		    font-weight: 500;
+		    margin-bottom: 0;
+		    // line-height: 100%;
+		}
+		.sku {
+			font-family: $header-font;
+			font-weight: 500;
+			margin-bottom: 1.5em;
+			line-height: 100%;
 		}
 		span.price, div.price, p.price {
 			margin: 0 !important;

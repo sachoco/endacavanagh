@@ -348,6 +348,13 @@ body.woocommerce #filter-box {
 body.woocommerce div.product .product_title {
   font-size: 24px;
   font-weight: 500;
+  margin-bottom: 0;
+}
+body.woocommerce div.product .sku {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1.5em;
+  line-height: 100%;
 }
 body.woocommerce div.product span.price, body.woocommerce div.product div.price, body.woocommerce div.product p.price {
   margin: 0 !important;

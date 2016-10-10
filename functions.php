@@ -526,7 +526,6 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 // }
 // add_filter('template_include', 'template_chooser');
 
-add_filter( 'woocommerce_currencies', 'add_my_currency' );
 
 /*
  * wc_remove_related_products
@@ -541,8 +540,10 @@ add_filter('woocommerce_related_products_args','wc_remove_related_products', 10)
 
 
 
+add_filter( 'woocommerce_currencies', 'add_my_currency' );
 
 function add_my_currency( $currencies ) {
+
      $currencies['EU'] = __( 'EU', 'woocommerce' );
      return $currencies;
 }
@@ -550,8 +551,9 @@ function add_my_currency( $currencies ) {
 add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
 
 function add_my_currency_symbol( $currency_symbol, $currency ) {
-     switch( $currency ) {
-          case 'EU': $currency_symbol = 'EU'; break;
+    switch( $currency ) {
+          case 'EU': $currency_symbol = 'EU';
+          case 'EUR': $currency_symbol = 'EU'; break;
      }
      return $currency_symbol;
 }
@@ -598,4 +600,9 @@ function custom_pre_get_posts_query( $q ) {
 
   // remove_action( 'pre_get_posts', 'custom_pre_get_posts_query' );
 
+}
+add_action( 'woocommerce_single_product_summary', 'dev_designs_show_sku', 5 );
+function dev_designs_show_sku(){
+    global $product;
+    echo '<div class="sku">Ref#: ' . $product->get_sku() . '</div>';
 }
