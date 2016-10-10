@@ -1,0 +1,34 @@
+body.woocommerce {
+	.go_to_cart {
+		display: block;		
+	}
+	#content.site-content {
+		.product_image {
+			float: left;
+			width: 68%;
+		}
+		div.product div.summary {
+			width: 30%;
+		}	
+		.entry-footer {
+			.wrapper {
+				.left {
+		    		float: left;
+	    			// width: 460px;
+	    			width: 68%;
+	    			// margin-right: 40px;	    			
+		    	}
+		    	.right {
+					// float: left;
+					// width: 660px;
+					float: right;
+					width: 30%;
+		    	}
+			}
+
+		}
+	}
+	ul.products li.product {
+	    width: 25% !important;
+	}
+}

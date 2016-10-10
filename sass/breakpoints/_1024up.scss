@@ -1,0 +1,23 @@
+// header#masthead {
+//     height: 123px;
+
+//     .site-branding {
+// 	    width: auto;
+// 	}
+// }
+// .main-navigation ul#primary-menu {
+// 	margin-top: 20px;
+// }
+// body {
+// 	margin-top: 123px;
+// }
+// .site-branding .site-title img {
+//     max-width: 100%;
+// }
+// #content.site-content {
+// 	top: 90px;
+// }
+body.page-template-default #content.site-content #primary.content-area {
+    width: 70% !important;
+    float: left !important;
+}
