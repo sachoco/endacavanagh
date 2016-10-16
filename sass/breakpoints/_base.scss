@@ -54,9 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 body.home #content.site-content {
     min-height: 0;
 }
-.main-navigation li a {
-	font-weight: 300;
-}
+
 a.buy-btn-black {
 	width: 69px;
 	height: 44px;
@@ -369,7 +367,7 @@ body.woocommerce {
     			}
 
 		    	.left {
-		    		clear: both;
+		    		// clear: both;
 		    		float: left;
 	    			// width: 460px;
 	    			width: 100%;
@@ -597,12 +595,19 @@ body.woocommerce-checkout {
 		}
 	}
 }
+
 .main-navigation {
+	min-width: 200px;
+	li {
+
+		a {
+			// font-weight: 400;
+			font-size: 15px;
+		}
+	}
 	ul {
 		ul {
-			
 			width: 340px;
-			
 			li#search, li#subscribe {
 				a {
 					margin: 0;
