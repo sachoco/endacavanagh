@@ -671,7 +671,7 @@ footer.site-footer {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .project-wrapper {
-    width: 33.3%;
+    width: calc(33.3% - 4px);
   }
 }
 .show-info {
