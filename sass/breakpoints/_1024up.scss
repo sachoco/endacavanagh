@@ -21,3 +21,7 @@ body.page-template-default #content.site-content #primary.content-area {
     width: 70% !important;
     float: left !important;
 }
+#content.site-content #secondary.widget-area {
+	float: left;
+	width: 30%;
+}

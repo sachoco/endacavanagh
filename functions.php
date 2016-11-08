@@ -561,7 +561,12 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
 
   function woocommerce_template_loop_product_thumbnail() {
-    echo woocommerce_get_product_thumbnail('medium_large');
+//     add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+//     echo woocommerce_get_product_thumbnail('medium_large');
+  global $post;
+    if ( has_post_thumbnail() )
+          echo get_the_post_thumbnail( $post->ID, "shop_thumbnail" );
+//     remove_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
   }
 }
 // add_filter( 'woocommerce_shipping_chosen_method', '__return_false', 99);
@@ -605,4 +610,27 @@ add_action( 'woocommerce_single_product_summary', 'dev_designs_show_sku', 5 );
 function dev_designs_show_sku(){
     global $product;
     echo '<div class="sku">Ref#: ' . $product->get_sku() . '</div>';
+}
+
+/**
+ * Conditionally Override Yoast SEO Breadcrumb Trail
+ * http://plugins.svn.wordpress.org/wordpress-seo/trunk/frontend/class-breadcrumbs.php
+ * -----------------------------------------------------------------------------------
+ */
+
+add_filter( 'wpseo_breadcrumb_links', 'wpse_100012_override_yoast_breadcrumb_trail' );
+
+function wpse_100012_override_yoast_breadcrumb_trail( $links ) {
+    global $post;
+
+    if ( is_product_category() ) {
+        $breadcrumb[] = array(
+            'url' => get_permalink( woocommerce_get_page_id( 'shop' ) ),
+            'text' => 'Shop',
+        );
+
+        array_splice( $links, 1, -2, $breadcrumb );
+    }
+
+    return $links;
 }

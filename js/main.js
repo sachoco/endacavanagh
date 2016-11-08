@@ -12,6 +12,16 @@
     var varSelects;
     $("#jckpc_images").hide();
     varSelects = 'form.variations_form select';
+    $('#category-menu').on('touchstart', function() {
+      return $(this).addClass('touch').toggleClass('active');
+    });
+    $('.size-finish-info a').on('click', function() {
+      var p;
+      p = $(".entry-footer").offset().top;
+      return $('html,body').animate({
+        scrollTop: p
+      }, 800, 'easeInOutCubic');
+    });
     $(document).on('change', varSelects, function() {
       var $selectField, $variationsForm, selectedAtt, selectedVal;
       $selectField = $(this);

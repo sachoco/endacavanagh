@@ -62,12 +62,28 @@ $search = '
 	<li id="search" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"><a><form method="get" action="/ENDA/"><input name="s" type="text" size="20" placeholder="type in keyword..." class="topmenu-search-field"><button type="submit" class="topmenu-search-button"><i class="fa fa-search"></i></button></form></a></li>
 </ul>
 </li>';
+// $subscribe = '
+// <li id="menu-subscribe" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16"><a href="#">subscribe   </a>
+// <ul class="sub-menu">
+// 	<li id="subscribe" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286">
+
+// 	<a href="#"><form><input name="email" type="text" size="20" placeholder="your email..." class="topmenu-subscribe-field"><button type="submit" class="topmenu-subscribe-button"><i class="fa fa-paper-plane-o"></i></button></form></a>
+// 	</li>
+// </ul>
+// </li>';
 $subscribe = '
-<li id="menu-subscribe" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16"><a href="#">subscribe   </a>
+<li id="menu-subscribe" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-16"><a href="#">subscribe</a>
 <ul class="sub-menu">
-	<li id="subscribe" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286"><a href="#"><form><input name="email" type="text" size="20" placeholder="your email..." class="topmenu-subscribe-field"><button type="submit" class="topmenu-subscribe-button"><i class="fa fa-paper-plane-o"></i></button></form></a></li>
+	<li id="subscribe" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286">
+<a href="#"><form action="//endacavanagh.us14.list-manage.com/subscribe/post?u=93f7397d17ed8b137f70b82a1&amp;id=bdb357636f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<input type="email" value="" name="EMAIL" class="email topmenu-subscribe-field" id="mce-EMAIL" size="20" placeholder="your email..." required>
+    <button type="submit" class="topmenu-subscribe-button"><i class="fa fa-paper-plane-o"></i></button>
+   <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_93f7397d17ed8b137f70b82a1_bdb357636f" tabindex="-1" value=""></div>
+</form></a>
+	</li>
 </ul>
 </li>';
+
 $social = '
 <li id="menu-social" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a target="_blank" href="https://www.linkedin.com/company/enda-cavanagh-photography"><i class="fa fa-linkedin-square"></i><span class="text">Enda on LinkedIn</span></a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a target="_blank" href="http://www.facebook.com/endacavanaghphoto"><i class="fa fa-facebook"></i><span class="text">Enda on Facebook</span></a></li>

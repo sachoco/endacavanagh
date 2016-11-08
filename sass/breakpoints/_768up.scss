@@ -3,6 +3,11 @@ body.woocommerce {
 		display: block;		
 	}
 	#content.site-content {
+		#jckpc_image_wrap {
+			&:after {
+				font-size: 1em;
+			}
+		}
 		.product_image {
 			float: left;
 			width: 68%;
@@ -29,6 +34,6 @@ body.woocommerce {
 		}
 	}
 	ul.products li.product {
-	    width: 25% !important;
+	    width: 33% !important;
 	}
 }

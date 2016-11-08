@@ -49,9 +49,21 @@
         },
 
         this.elementNormalHeight = function () {
-
-            return this.portfolioContainer.find('.element.no-wide-width-height:visible').find('.flip-wrap').height();
+            var height = this.portfolioContainer.find('.element.no-wide-width-height:visible').find('.flip-wrap').height();
+            if(!height||height==0){
+                height = this.portfolioContainer.find('.element.wide-width:visible').find('.flip-wrap').height();
+            }
+            if(!height||height==0){
+                height = this.portfolioContainer.find('.element.wide-width-height:visible').find('.flip-wrap').height();
+            }
+            if(!height||height==0){
+                height = this.portfolioContainer.find('.element.wide-height:visible').find('.flip-wrap').width();
+                console.log(height);
+            }
+            return height;
+            // return this.portfolioContainer.find('.element.no-wide-width-height:visible').find('.flip-wrap').height();
             // return this.portfolioContainer.find('.element:not(.wide-width-height:visible, .wide-height:visible)').find('.flip-wrap').height();
+            // return this.portfolioContainer.find('.element.wide-height:visible').find('.flip-wrap').height();
 
         },
 

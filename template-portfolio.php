@@ -28,7 +28,7 @@ get_header(); ?>
 
     <main id="main" class="site-main" role="main">
 
-        <div id="filter-box"><div id="category-menu"><a href="javascript:void(0);" class="label">&gt; Select Category</a>
+        <div id="filter-box"><div id="category-menu" ontouchstart=""><a href="javascript:void(0);" class="label">&gt; Select Category</a>
 
           <ul id="category-submenu">
 
@@ -113,7 +113,8 @@ get_header(); ?>
 
 
         // $container.load("/portfalio/?");
-        $.get( "<?php echo get_site_url(); ?>/portfolio/", { cat: "<?php echo $cat ?>", search: $( "#s" ).val() } ).done(
+        $.get( "<?php echo get_site_url(); ?>/portfolio/", { search: $( "#s" ).val() } ).done(
+        // $.get( "<?php echo get_site_url(); ?>/portfolio/", { cat: "<?php echo $cat ?>", search: $( "#s" ).val() } ).done(
           function ( response ) {
 
 

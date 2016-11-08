@@ -90,6 +90,15 @@ a.buy-btn-black:hover {
           filter: invert(100%);
 }
 
+#content.site-content #secondary.widget-area {
+  float: none;
+  width: 100%;
+}
+
+.fancybox-title {
+  font-family: "Rajdhani", sans-serif;
+}
+
 body.woocommerce {
   background-image: none;
 }
@@ -220,14 +229,17 @@ body.woocommerce #content.site-content .woocommerce-variation-price .price {
 body.woocommerce #content.site-content .woocommerce-variation-price .small {
   font-family: "Rajdhani", sans-serif;
 }
-body.woocommerce #content.site-content .shipping-info {
+body.woocommerce #content.site-content .shipping-info, body.woocommerce #content.site-content .size-finish-info {
   color: #E91C35;
   font-size: .83em;
   clear: both;
   margin-top: 1em;
 }
-body.woocommerce #content.site-content .shipping-info a {
+body.woocommerce #content.site-content .shipping-info a, body.woocommerce #content.site-content .size-finish-info a {
   color: #E91C35;
+}
+body.woocommerce #content.site-content .size-finish-info {
+  margin-top: 0;
 }
 body.woocommerce #content.site-content #primary.content-area {
   padding: 10px;
@@ -246,6 +258,7 @@ body.woocommerce #content.site-content .product_image {
   float: none;
   width: 100%;
   position: relative;
+  margin-bottom: 1em;
 }
 body.woocommerce #content.site-content #image_container {
   border: 1px solid;
@@ -281,6 +294,11 @@ body.woocommerce #content.site-content #jckpc_images {
   width: 100% !important;
   position: absolute;
   top: 0;
+}
+body.woocommerce #content.site-content #jckpc_image_wrap:after {
+  content: "Interior Design: FKL Architects";
+  font-size: 0.6em;
+  display: block;
 }
 body.woocommerce #content.site-content .entry-footer {
   position: relative;
@@ -410,9 +428,12 @@ body.woocommerce div.product .summary {
   margin-bottom: 0;
 }
 body.woocommerce ul.products li.product {
-  width: 50% !important;
+  width: 100% !important;
   padding: 10px !important;
   margin: 0 !important;
+}
+body.woocommerce ul.products li.product.first {
+  clear: none;
 }
 body.woocommerce ul.products li.product .onsale {
   background-color: rgba(0, 0, 0, 0.5);
@@ -435,6 +456,15 @@ body.woocommerce ul.products li.product .price del .amount {
 }
 body.woocommerce ul.products li.product .price ins {
   display: inline-block;
+}
+
+#category-menu.touch ul {
+  display: none;
+}
+#category-menu.touch.active ul {
+  display: block;
+  background: url("../images/top_bg.png");
+  padding: 20px 40px 20px 10px;
 }
 
 body.woocommerce-cart .button, body.woocommerce-cart input.button {
@@ -515,6 +545,13 @@ body.woocommerce-checkout input.button.alt:hover {
 .main-navigation ul ul {
   width: 340px;
 }
+.main-navigation ul ul li .topmenu-search-field {
+  width: 216px;
+}
+.main-navigation ul ul li .topmenu-subscribe-field {
+  width: 180px;
+  float: left;
+}
 .main-navigation ul ul li#search a, .main-navigation ul ul li#subscribe a {
   margin: 0;
   padding: 0;
@@ -568,10 +605,10 @@ body.woocommerce-checkout input.button.alt:hover {
   position: relative;
   overflow: hidden;
 }
-.project-wrapper:hover div.info {
+.project-wrapper.is-open div.info {
   min-height: 100%;
 }
-.project-wrapper:hover div.desc {
+.project-wrapper.is-open div.desc {
   display: block;
 }
 
@@ -740,7 +777,7 @@ tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
   body.woocommerce ul.products li.product {
-    width: 33% !important;
+    width: 50% !important;
   }
 }
 /*********************
@@ -752,6 +789,9 @@ you can add resource intensive styles.
 @media only screen and (min-width: 768px) {
   body.woocommerce .go_to_cart {
     display: block;
+  }
+  body.woocommerce #content.site-content #jckpc_image_wrap:after {
+    font-size: 1em;
   }
   body.woocommerce #content.site-content .product_image {
     float: left;
@@ -769,7 +809,7 @@ you can add resource intensive styles.
     width: 30%;
   }
   body.woocommerce ul.products li.product {
-    width: 25% !important;
+    width: 33% !important;
   }
 }
 /*********************
@@ -783,11 +823,21 @@ you can add resource intensive styles.
     width: 70% !important;
     float: left !important;
   }
+
+  #content.site-content #secondary.widget-area {
+    float: left;
+    width: 30%;
+  }
 }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
+@media only screen and (min-width: 1240px) {
+  body.woocommerce ul.products li.product {
+    width: 25% !important;
+  }
+}
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

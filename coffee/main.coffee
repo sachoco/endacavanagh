@@ -6,6 +6,12 @@ sanitise_str =(str) ->
 jQuery ($) ->
 	$("#jckpc_images").hide()
 	varSelects = 'form.variations_form select'
+
+	$('#category-menu').on 'touchstart', ->
+		# elm = $(this).find('ul')
+		# if elm.css('display') == 'block'
+		# 	elm.css('display', 'none')
+		$(this).addClass('touch').toggleClass('active')
 	# finishSelect = 'select#pa_finish'
 	# glassSelect = 'select#pa_glass-option'
 	# $(glassSelect).closest('tr').find('.label, .value .dropdown-select').hide()
@@ -15,6 +21,9 @@ jQuery ($) ->
 	# 		$(glassSelect).closest('tr').find('.label, .value .dropdown-select').fadeIn()
 	# 	else
 	# 		$(glassSelect).prop('selectedIndex', 1).trigger("change").closest('tr').find('.label, .value .dropdown-select').fadeOut()
+	$('.size-finish-info a').on 'click', ->
+		p = $(".entry-footer").offset().top
+		$('html,body').animate({ scrollTop: p }, 800, 'easeInOutCubic')
 
 	$(document).on 'change', varSelects, ->
 		$selectField = $(this)
@@ -43,6 +52,5 @@ jQuery ($) ->
 					$(this).prop('selectedIndex', 1).trigger("change")
 					# $(this).closest('tr').find('.label, .value .dropdown-select').hide()
 					# $(this).closest('tr').find('.value .dropdown-select').hide()
-
 
 	@

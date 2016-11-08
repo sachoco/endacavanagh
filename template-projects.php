@@ -62,12 +62,13 @@ get_header(); ?>
     jQuery(document).on('click', '.show-info', function(ev) {
 
       ev.preventDefault();
-
+      ev.stopPropagation();
       var $container = jQuery(this).closest('.project-wrapper');
+      $container.toggleClass('is-open');
 
-      $container.find('.project-description').addClass('is-open');
+      // $container.find('.project-description').addClass('is-open');
 
-      jQuery('body').append('<div class="overlay"></div>');
+      // jQuery('body').append('<div class="overlay"></div>');
 
     });
 

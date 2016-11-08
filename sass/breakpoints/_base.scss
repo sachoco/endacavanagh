@@ -112,6 +112,13 @@ a.buy-btn-black {
 .invert {
 	filter: invert(100%);
 }
+#content.site-content #secondary.widget-area {
+	float: none;
+	width: 100%;
+}
+.fancybox-title {
+	font-family: $header-font;
+}
 body.woocommerce {
 	background-image: none;
 	#container {
@@ -265,6 +272,10 @@ body.woocommerce {
 	    		color: $red;
 	    	}
 	    }
+	    .size-finish-info {
+	    	@extend .shipping-info;
+			margin-top: 0;
+	    }
 		#primary.content-area {
 			padding: 10px;
 			// max-width: 1240px;
@@ -283,6 +294,7 @@ body.woocommerce {
 			float: none;
 			width: 100%;
 			position: relative;
+			margin-bottom: 1em;
 		}	
 		#image_container {
 			border: 1px solid;
@@ -322,6 +334,13 @@ body.woocommerce {
 			position: absolute;
 			top: 0;
 
+		}
+		#jckpc_image_wrap {
+			&:after {
+				content: "Interior Design: FKL Architects";
+				font-size: 0.6em;
+				display: block;
+			}
 		}
 
 		.entry-footer {
@@ -483,9 +502,12 @@ body.woocommerce {
 
 	ul.products {
 		li.product {
-			width: 50% !important;
+			width: 100% !important;
 			padding: 10px !important;
 			margin: 0 !important;
+			&.first {
+				clear: none;
+			}
 			.onsale {
 			    background-color: rgba(0,0,0,0.5);
 			    border-radius: 0;
@@ -515,6 +537,18 @@ body.woocommerce {
 	}
 
 
+}
+#category-menu.touch {
+	ul {
+		display: none; 
+	}
+	&.active {
+		ul { 
+			display: block; 
+			background: url('../images/top_bg.png'); 
+			padding: 20px 40px 20px 10px; 
+		}
+	}
 }
 body.woocommerce-cart {
 	.button, input.button {
@@ -608,10 +642,20 @@ body.woocommerce-checkout {
 	ul {
 		ul {
 			width: 340px;
+			li {
+				.topmenu-search-field {
+					width: 216px;
+				}
+				.topmenu-subscribe-field {
+					width: 180px;
+					float: left;
+				}
+			}
 			li#search, li#subscribe {
 				a {
 					margin: 0;
 					padding: 0;
+					
 				}
 			}
 		}
@@ -705,7 +749,7 @@ body.woocommerce-checkout {
 		position: relative;
 		overflow: hidden;
 
-		&:hover {
+		&.is-open {
 			div.info {
 				min-height: 100%;
 			}
