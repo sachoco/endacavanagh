@@ -261,7 +261,7 @@
 			});
 
 			jQuery(document).keyup(function(e) {
-			     if (e.keyCode == 27) { // escape key maps to keycode `27`
+			     if (e.keyCode == 27||e.keyCode == 37||e.keyCode == 39) { // escape key maps to keycode `27`
 			        hideInfoBox();
 			    }
 			});

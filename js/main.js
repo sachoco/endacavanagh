@@ -12,8 +12,8 @@
     var varSelects;
     $("#jckpc_images").hide();
     varSelects = 'form.variations_form select';
-    $('#category-menu').on('touchstart', function() {
-      return $(this).addClass('touch').toggleClass('active');
+    $('#category-menu .label').on('touchstart', function() {
+      return $(this).parent().addClass('touch').toggleClass('active');
     });
     $('.size-finish-info a').on('click', function() {
       var p;

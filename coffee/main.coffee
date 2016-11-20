@@ -7,11 +7,11 @@ jQuery ($) ->
 	$("#jckpc_images").hide()
 	varSelects = 'form.variations_form select'
 
-	$('#category-menu').on 'touchstart', ->
+	$('#category-menu .label').on 'touchstart', ->
 		# elm = $(this).find('ul')
 		# if elm.css('display') == 'block'
 		# 	elm.css('display', 'none')
-		$(this).addClass('touch').toggleClass('active')
+		$(this).parent().addClass('touch').toggleClass('active')
 	# finishSelect = 'select#pa_finish'
 	# glassSelect = 'select#pa_glass-option'
 	# $(glassSelect).closest('tr').find('.label, .value .dropdown-select').hide()
