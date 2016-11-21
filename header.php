@@ -64,7 +64,7 @@ if (is_page()) {
 $search = '
 <li id="menu-search" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15"><a href="#"><i class="fa fa-search"></i></a>
 <ul class="sub-menu">
-	<li id="search" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"><a><form method="get" action="/ENDA/"><input name="s" type="text" size="20" placeholder="type in keyword..." class="topmenu-search-field"><button type="submit" class="topmenu-search-button"><i class="fa fa-search"></i></button></form></a></li>
+	<li id="search" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-284"><a><form method="get" action="/"><input name="s" type="text" size="20" placeholder="type in keyword..." class="topmenu-search-field"><button type="submit" class="topmenu-search-button"><i class="fa fa-search"></i></button></form></a></li>
 </ul>
 </li>';
 // $subscribe = '
