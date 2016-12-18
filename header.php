@@ -91,9 +91,12 @@ $subscribe = '
 
 $social = '
 <li id="menu-social" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24"><a target="_blank" href="https://www.linkedin.com/company/enda-cavanagh-photography"><i class="fa fa-linkedin-square"></i><span class="text">Enda on LinkedIn</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a target="_blank" href="http://www.facebook.com/endacavanaghphoto"><i class="fa fa-facebook"></i><span class="text">Enda on Facebook</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a target="_blank" href="https://twitter.com/endacavanagh"><i class="fa fa-twitter"></i><span class="text">Enda on Twitter</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a target="_blank" href="https://plus.google.com/u/0/112994619421871033869/posts"><i class="fa fa-google-plus"></i><span class="text">Enda on Google+</span></a></li>';
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25 no-border"><a target="_blank" href="http://www.facebook.com/endacavanaghphoto"><i class="fa fa-facebook"></i><span class="text">Enda on Facebook</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26 no-border"><a target="_blank" href="https://twitter.com/endacavanagh"><i class="fa fa-twitter"></i><span class="text">Enda on Twitter</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27 no-border"><a target="_blank" href="https://plus.google.com/u/0/112994619421871033869/posts"><i class="fa fa-google-plus"></i><span class="text">Enda on Google+</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28 no-border"><a target="_blank" href="https://www.instagram.com/cavanaghenda"><i class="fa fa-instagram"></i><span class="text">Enda on Instagram</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a class="icon-link" href="/ENDA/cart"><i class="fa fa-shopping-cart"></i></a></li>
+';
 
 				wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'items_wrap' => '<ul id=%1$s class=%2$s>%3$s'.$search.$subscribe.$social.'</ul>' ) );
 

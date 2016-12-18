@@ -1031,3 +1031,78 @@ body.page-template-template-projects {
 	}
 
 }
+.page-template-template-size-finish-information {
+	#content.site-content {
+		top: 0;
+		margin: 0;
+	    width: 100%;
+	    padding: 20px 10px 0;
+	    // padding: 0;
+	    .entry-content {
+			margin: 0;
+		}
+    }
+	#container {
+		padding: 0;
+	}
+
+	.entry-footer {
+		position: relative;
+		top: 2em;
+		clear: both;   
+	    .title {
+	    	position: relative;
+	    	float: left;
+		    left: -10px;
+		    width: calc(100% + 20px);
+			// text-align: center;
+			margin: 1em 0;
+		    // padding: 2em;
+		    background-color: #e5e5e5;
+		    h3 {
+		    	font-weight: normal;
+			    font-size: 24px;
+			    margin: 0;
+			    text-align: center;
+		    }
+		    
+	    }
+
+	    .wrapper {
+	    	// width: 1240px;
+	    	width: 100%;
+	    	margin: auto;
+	    	padding: 40px;
+	    	clear: both;
+	    	h6 {
+	    		font-size: 17px;
+	    		margin: 0;
+	    	}
+	    	p {
+	    		font-family: $header-font;
+	    		margin-top: 0;
+	    	}
+	    	.caption {
+				font-family: $sepecial-font;
+    			font-size: 0.7em;
+    			margin-bottom: 1em;
+			}
+
+	    	.left {
+	    		// clear: both;
+	    		float: left;
+    			// width: 460px;
+    			width: 100%;
+    			// margin-right: 40px;	    			
+	    	}
+	    	.right {
+				// float: left;
+				// width: 660px;
+				float: left;
+				width: 100%;
+	    	}
+
+	    }
+	}	
+}
+

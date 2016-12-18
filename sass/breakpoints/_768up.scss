@@ -37,3 +37,22 @@ body.woocommerce {
 	    width: 33% !important;
 	}
 }
+.page-template-template-size-finish-information {
+	.entry-footer {
+		.wrapper {
+			.left {
+	    		float: left;
+    			// width: 460px;
+    			width: 68%;
+    			// margin-right: 40px;	    			
+	    	}
+	    	.right {
+				// float: left;
+				// width: 660px;
+				float: right;
+				width: 30%;
+	    	}
+		}
+
+	}
+}
